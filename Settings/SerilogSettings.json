@@ -1,0 +1,35 @@
+{
+  "Serilog": {
+    "ShowConsole": 0,
+    "Using": [
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.File"
+    ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Information",
+        "System": "Warning",
+        "Microsoft.EntityFrameworkCore.Database.Command": "Warning"
+      }
+    },
+    "Enrich": [
+      "FromLogContext"
+    ],
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": null
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "\\\\RHSPWFSOC00-07\\Operations\\0410_Digital_Orebody_RHOKS\\Working\\0050_RHOKS\\00_ProcessLogs\\DigitalOrebodyRHOKS\\DigitalOrebodyRHOKS_.log",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": "7"
+        }
+      }
+    ],
+    "ShowConsoleBool": false
+  }
+}

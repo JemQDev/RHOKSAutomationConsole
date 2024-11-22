@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RHOKSAutomationConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "--DataSource TEST"
+    }
+  }
+}
